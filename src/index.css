@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(255, 255, 255, 0.2); /* semi-transparent background */
+  backdrop-filter: blur(10px); /* blur effect */
+  padding: 16px 22px;
+  border-radius: 100%;
+  color: black;
+  background-image: url("/src/assets/icons/fleche.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.swiper-button-next {
+  rotate: 360deg;
+  right: 20px;
+}
+.swiper-button-prev {
+  rotate: 180deg;
+  left: 20px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+.swiper-pagination-bullet-active {
+  background-color: #000 !important;
+}
+.project {
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  /* border-radius: 30px; */
+}
+
+.swiper-slide-active .project {
+  transform: scale(1.05);
+}
